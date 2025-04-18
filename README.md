@@ -1,32 +1,38 @@
+# 🎧 Defiance Radio Discord Bot
 
-# Shoutcast Radio Discord Bot
+A custom Discord bot that streams your Shoutcast radio station with commands to control playback, stream quality, and show listener stats — all from Discord.
 
-A simple Discord bot for Defiant Network's Shoutcast radio.  
-Features:
-- Show now playing info
-- Auto-post when songs change
-- Updates bot status with the current song
+## 🚀 Features
 
-Command | Description
-/nowplaying | Show the current song, listener count, and DJ
-/listeners | Show the number of listeners tuned in
-/dj | Show the current DJ's name
-/help | Show the list of available radio bot commands
+- `/cmds` — List all available commands
+- `/join` — Join a voice channel
+- `/leave` — Leave the voice channel
+- `/play` — Start streaming the radio
+- `/quality [kbps]` — Change stream bitrate
+- `/whatsplaying` — Show the currently playing track
+- `/statusinterval [seconds]` — Change how often status updates
+- `/openstream` — Share direct stream link
+- `/website` — Share your station’s website
+- `/streaminfo` — Show real-time bitrate, uptime, and listener count
 
-## Setup
-1. Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-2. Create `.env` file with your bot token:
-```
-DISCORD_TOKEN=your_discord_bot_token_here
-```
-3. Make sure your Discord server has a channel called `radio-updates`.
+## ⚙️ Setup
 
+1. Clone the repo
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Create a `.env` file and fill in your bot token, guild ID, and stream URLs
 4. Run the bot:
-```bash
-python radio_bot.py
-```
+   ```bash
+   python bot.py
+   ```
 
-Enjoy!
+## 🛠 Requirements
+
+- Python 3.10+
+- A working Shoutcast stream with JSON stats available at `/stats?json=1`
+
+---
+
+🎉 Powered by [Defiance Radio](http://www.defiantnetwork.co.uk) – where the party’s never stop!
